@@ -1,0 +1,40 @@
+.nav-main-container {
+  height: 4rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: rgb(23, 102, 164);
+  background: linear-gradient(
+    90deg,
+    rgba(23, 102, 164, 0.9668242296918768) 0%,
+    rgba(205, 29, 253, 0.9724264705882353) 68%,
+    rgba(200, 36, 196, 1) 100%
+  );
+}
+.logo-img {
+  height: 4rem;
+}
+
+.nav-li {
+  display: flex;
+  list-style: none;
+  gap: 3rem;
+}
+.li-links {
+  font-size: large;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.726);
+}
+.login-link {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: large;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.726);
+}

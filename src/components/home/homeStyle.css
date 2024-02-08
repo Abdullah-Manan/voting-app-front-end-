@@ -1,0 +1,40 @@
+.h-heading {
+  font-family: poppins, sans-serif;
+  text-align: center;
+  margin-top: 2rem;
+}
+.h-all-elections {
+  margin: auto;
+  width: 50rem;
+  margin-top: 3rem;
+  display: grid;
+  gap: 4rem;
+  grid-template-columns: 25rem 25rem;
+}
+
+.single-elec {
+  background: rgba(87, 160, 216, 0.801);
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.h-elc-name {
+  font-size: 32px;
+}
+.h-date-text {
+  font-size: 16px;
+}
+.h-date {
+  font-size: 16px;
+}
+.h-button {
+  margin: auto;
+  width: 7rem;
+  padding: 8px;
+  background-color: rgb(26, 136, 84);
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}

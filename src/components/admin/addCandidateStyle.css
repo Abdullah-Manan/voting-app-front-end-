@@ -1,0 +1,103 @@
+.can-main-container {
+  width: 100%;
+  min-height: 90svh;
+  position: relative;
+  background-color: rgb(221, 243, 243);
+}
+.can-form {
+  position: absolute;
+  background-color: white;
+  top: 10%;
+  left: 30%;
+  width: 50%;
+  border-radius: 15px;
+}
+.can-top {
+  width: 100%;
+  height: 80px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 27px;
+  font-weight: 700;
+  color: white;
+  background: rgb(23, 102, 164);
+  background: linear-gradient(
+    90deg,
+    rgba(23, 102, 164, 0.9668242296918768) 0%,
+    rgba(205, 29, 253, 0.9724264705882353) 68%,
+    rgba(200, 36, 196, 1) 100%
+  );
+}
+
+.can-input {
+  display: grid;
+  grid-template-columns: 15rem 15rem;
+  grid-column-gap: 6rem;
+  grid-row-gap: 1rem;
+  padding: 0px 40px;
+  margin-top: 20px;
+}
+.can-text {
+  font-weight: 600;
+  font-size: 16px;
+  color: rgba(32, 37, 37, 0.719);
+}
+.can-email,
+.can-name,
+.can-party {
+  padding: 6px;
+  border: 1px solid rgba(14, 9, 9, 0.603);
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: 500;
+
+  color: rgba(32, 37, 37, 0.719);
+}
+.can-email:focus,
+.can-name:focus,
+.can-party:focus {
+  outline: none;
+}
+.email-input,
+.name-input,
+.party-input,
+.img-input {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.can-label {
+  margin-left: 10px;
+  font-size: 14px;
+}
+.can-add-button {
+  width: 90%;
+  margin: 2rem;
+  background: rgb(23, 102, 164);
+  background: linear-gradient(
+    90deg,
+    rgba(23, 102, 164, 0.9668242296918768) 0%,
+    rgba(205, 29, 253, 0.9724264705882353) 68%,
+    rgba(200, 36, 196, 1) 100%
+  );
+
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+  padding: 4px;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  margin: 1rem 2rem;
+}
+
+@media screen and (max-width: 767px) {
+  .can-input {
+    grid-template-columns: 15rem;
+    grid-column-gap: 1rem;
+  }
+}
