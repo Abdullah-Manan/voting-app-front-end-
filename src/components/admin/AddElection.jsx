@@ -11,6 +11,7 @@ function AddCandidate() {
   const [user, setUser] = useState("");
 
   const navigate = useNavigate();
+
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (token) {

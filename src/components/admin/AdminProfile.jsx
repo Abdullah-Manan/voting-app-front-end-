@@ -33,7 +33,12 @@ function AdminProfile() {
             >
               View All Elections <ArrowForwardIcon fontSize="medium" />
             </button>
-            <button className="relust-botton">
+            <button
+              className="relust-botton"
+              onClick={() => {
+                navigate("/allresult");
+              }}
+            >
               See Result <ArrowForwardIcon fontSize="medium" />
             </button>
             <button

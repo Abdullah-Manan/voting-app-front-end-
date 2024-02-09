@@ -2,11 +2,14 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./allCandidatesStyle.css";
 import { useParams } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
 function AllCandidates() {
+  const navigate = useNavigate();
   const { id } = useParams();
   const [candidates, setCandidates] = useState([]);
-
+  const handleVoteClick = (electionId, userId) => {
+    navigate(`/vote/${electionId}/${userId}`);
+  };
   const fetchData = async () => {
     try {
       const response = await axios.get(
@@ -37,7 +40,17 @@ function AllCandidates() {
               <p className="h-date-text">
                 Party Symbol: {user.candidates[0].election_symbol}
               </p>
-              <button className="c-button">Vote Now</button>
+              <button
+                className="c-button"
+                onClick={() =>
+                  handleVoteClick(
+                    user.candidates[0].election_id,
+                    user.candidates[0].id
+                  )
+                }
+              >
+                Vote Now
+              </button>
             </div>
           ))
         ) : (

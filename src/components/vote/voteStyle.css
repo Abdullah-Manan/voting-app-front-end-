@@ -1,0 +1,9 @@
+.v-main-container {
+  position: relative;
+  min-height: 80vh;
+}
+
+.v-form {
+  position: absolute;
+  left: 35%;
+}

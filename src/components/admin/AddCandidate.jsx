@@ -12,10 +12,21 @@ function AddCandidate() {
   const [election_party, setElectionParty] = useState("");
   const [election_symbol, setElectionSymbol] = useState("");
   const [symbol_image, setSymbolImage] = useState(null);
+  const [election, setElection] = useState([]);
   const [user, setUser] = useState([]);
   const navigate = useNavigate();
+  const fetchElections = async () => {
+    try {
+      const response = await axios.get("http://voting-app.local/api/elections");
+
+      setElection(response.data.data.elections);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
 
   useEffect(() => {
+    fetchElections();
     const token = localStorage.getItem("token");
     if (token) {
       axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
@@ -89,13 +100,22 @@ function AddCandidate() {
               <input type="file" onChange={handleCandidateImage} />
             </div>
             <div className="party-input">
-              <span className="can-text">Election Id:</span>
-              <input
-                type="text"
-                placeholder="Party Name"
-                className="can-party"
+              <label className="log-text" htmlFor="dropdown">
+                Election:
+              </label>
+              <select
+                className="can-email"
+                id="dropdown"
+                value={election_id}
                 onChange={(e) => setElectionId(e.target.value)}
-              />
+              >
+                <option value="">Select an option</option>
+                {election.map((election) => (
+                  <option key={election.id} value={election.id}>
+                    {election.name}
+                  </option>
+                ))}
+              </select>
             </div>
             <div className="party-input">
               <span className="can-text">Election Party:</span>
