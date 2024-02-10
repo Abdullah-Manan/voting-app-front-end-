@@ -63,10 +63,10 @@ function VotingPage() {
   return (
     <div className="v-main-container">
       <form onSubmit={handleSubmit} className="v-form">
-        <h1>Vote</h1>
+        <h1 className="v-top-h">Vote</h1>
         <div className="v-webcam-div">
           {!image ? (
-            <div>
+            <div className="v-webcam-div">
               <Webcam
                 ref={webref}
                 screenshotFormat="image/png"
@@ -74,10 +74,17 @@ function VotingPage() {
                 height={400}
                 width={400}
               />
-              <button onClick={takeImage}>Scan</button>
+              <button onClick={takeImage} className="v-button">
+                Scan
+              </button>
             </div>
           ) : (
-            <button onClick={reTake}>Retake</button>
+            <div className="voter-image-div">
+              <img src={image} alt="" className="voter-image" />
+              <button onClick={reTake} className="v-button">
+                Retake
+              </button>
+            </div>
           )}
         </div>
         <div className="v-email-div">
@@ -88,12 +95,15 @@ function VotingPage() {
             type="email"
             required
             className="v-email"
+            placeholder="Enter Email"
             onChange={(e) => {
               setEmail(e.target.value);
             }}
           />
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit" className="v-button">
+          Submit
+        </button>
       </form>
     </div>
   );

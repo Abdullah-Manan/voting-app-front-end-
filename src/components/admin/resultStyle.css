@@ -1,0 +1,47 @@
+.result-single-div {
+}
+.result-election-name {
+  color: #ff8b00;
+  text-align: center;
+  font-family: Poppins, sans-serif;
+  font-size: 34px;
+  margin-top: 2rem;
+}
+.candidate-vote {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 20rem 20rem 20rem;
+  justify-content: center;
+  grid-column-gap: 2rem;
+}
+
+.candidate-item {
+  background-color: #fff6ec;
+  padding: 1rem;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.candidate-name {
+  color: #171717;
+  font-family: Poppins, sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+}
+.candidate-party {
+  color: #171717;
+  font-family: Poppins, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+}
+.candidate-votes {
+  background-color: #ff8b00;
+  color: white;
+  width: 5rem;
+  padding: 6px;
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
+  border-radius: 10px;
+}

@@ -10,6 +10,7 @@
   display: grid;
   grid-template-columns: 20rem 20rem 20rem;
   grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
   margin: 0 auto;
   margin-top: 4rem;
   max-width: fit-content;
@@ -41,7 +42,7 @@
   font-family: Poppins, sans-serif;
   width: 6rem;
   padding: 8px;
-  background-color: #ff8b00;
+  background-color: #ff8c00d7;
   color: white;
   border: none;
   border-radius: 15px;

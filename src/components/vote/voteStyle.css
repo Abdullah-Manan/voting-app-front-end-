@@ -3,7 +3,64 @@
   min-height: 80vh;
 }
 
+.v-top-h {
+  background: rgb(23, 102, 164);
+  background: linear-gradient(
+    90deg,
+    rgba(23, 102, 164, 0.9668242296918768) 0%,
+    rgba(205, 29, 253, 0.9724264705882353) 68%,
+    rgba(200, 36, 196, 1) 100%
+  );
+  text-align: center;
+  color: white;
+  font-family: Poppins, sans-serif;
+  font-size: 32px;
+  width: 100%;
+}
+
 .v-form {
   position: absolute;
   left: 35%;
+  top: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.v-webcam-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.voter-image-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.v-button {
+  background-color: orange;
+  width: 5rem;
+  padding: 4px;
+  font-size: 20px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.v-email-div {
+}
+.v-email-label {
+  font-family: Poppins, sans-serif;
+  font-size: 18px;
+}
+.v-email {
+  font-family: Poppins, sans-serif;
+  font-size: 18px;
+  padding: 8px;
+  border-radius: 20px;
+  border: 1px solid black;
+}
+.v-email:focus {
+  outline: none;
 }
