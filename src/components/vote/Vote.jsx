@@ -8,6 +8,7 @@ import { useParams, useNavigate } from "react-router-dom";
 function VotingPage() {
   const navigate = useNavigate();
   const { electionId, userId } = useParams();
+  const [valid, setValid] = useState(false);
   const [image, setImage] = useState(null);
   const [voter_email, setEmail] = useState("");
 
@@ -27,6 +28,10 @@ function VotingPage() {
       return;
     }
     try {
+      if (valid == false) {
+        alert("Please enter a valid Number");
+      }
+
       const formData = new FormData();
       formData.append("image", dataURLtoFile(image, "image.png"));
       formData.append("election_id", electionId);
@@ -42,10 +47,21 @@ function VotingPage() {
           },
         }
       );
-      console.log("Image uploaded:", response.data);
+
       navigate("/");
     } catch (error) {
-      console.error("Error uploading image:", error);
+      alert(error.response.data.message);
+    }
+  };
+
+  const handleChange = (event) => {
+    const inputValue = event.target.value;
+    const regex = /^[0-9]{5}-[0-9]{7}-[0-9]$/;
+    if (regex.test(inputValue)) {
+      setEmail(inputValue);
+      setValid(true);
+    } else {
+      setValid(false);
     }
   };
 
@@ -89,16 +105,15 @@ function VotingPage() {
         </div>
         <div className="v-email-div">
           <label htmlFor="email" className="v-email-label">
-            Enter Email:
+            CNIC:
           </label>
           <input
-            type="email"
+            type="text"
             required
             className="v-email"
             placeholder="Enter Email"
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
+            onChange={handleChange}
+            style={{ borderColor: valid ? "initial" : "red" }}
           />
         </div>
         <button type="submit" className="v-button">

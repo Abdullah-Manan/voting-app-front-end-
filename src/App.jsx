@@ -28,7 +28,7 @@ function App() {
           </Route>
 
           <Route exact path="/" element={<Home />}></Route>
-          <Route exact path="/about" element={<About />}></Route>
+          {/* <Route exact path="/about" element={<About />}></Route> */}
           <Route exact path="/login" element={<AdminLogin />}></Route>
           <Route path="/allcandidates/:id" element={<AllCandidates />} />
           <Route path="/vote/:electionId/:userId" element={<Vote />} />
